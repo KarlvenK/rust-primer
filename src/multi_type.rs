@@ -70,7 +70,49 @@ pub mod structure {
 
 pub mod enumerate {
 
+    enum SpecialPoint <'a> {
+        Point(i32, i32),
+        Special(&'a str),
+    }
+
+    struct Point {
+        x: i32,
+        y: i32,
+    }
+    use crate::utils::put_blank_line;
     pub fn practice() {
+        put_blank_line();
+        let sp = SpecialPoint::Point(0, 0);
+        match sp {
+            SpecialPoint::Point(x,y) => {
+                println!("I am SpecialPoint(x={}, y={})", x, y);
+            }
+            SpecialPoint::Special(why) => {
+                println!("I am Special because I am {}", why);
+            }
+        }
+        let sp = SpecialPoint::Special("the origin point");
+        match sp {
+            SpecialPoint::Point(x,y) => {
+                println!("I am SpecialPoint(x={}, y={})", x, y);
+            }
+            SpecialPoint::Special(why) => {
+                println!("I am Special because I am {}", why);
+            }
+        }
+
+        put_blank_line();
+
+        let point = Point {
+            x: 1,
+            y: 2,
+        };
+
+        let Point{x: xx, y: yy} = point;
+        // or
+        let Point{x, y} = point;
+
+        println!("{} {}", xx, yy);
 
     }
 }
