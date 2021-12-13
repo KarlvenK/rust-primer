@@ -4,6 +4,7 @@ use rust_primer::circle;
 use rust_primer::my_string;
 use rust_primer::ownership;
 use rust_primer::pattern_match;
+use rust_primer::option_result;
 
 fn main() {
     println!("Hello, world!");
@@ -15,4 +16,5 @@ fn main() {
     my_string::practice();
     ownership::practice();
     pattern_match::practice();
+    option_result::practice();
 }
