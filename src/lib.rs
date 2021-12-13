@@ -1,5 +1,6 @@
 pub mod multi_type;
 pub mod my_string;
+pub mod ownership;
 
 pub mod vector {
     use crate::utils;

@@ -2,6 +2,7 @@ use rust_primer::multi_type;
 use rust_primer::vector;
 use rust_primer::circle;
 use rust_primer::my_string;
+use rust_primer::ownership;
 
 fn main() {
     println!("Hello, world!");
@@ -11,4 +12,5 @@ fn main() {
     multi_type::structure::practice();
     multi_type::enumerate::practice();
     my_string::practice();
+    ownership::practice();
 }
