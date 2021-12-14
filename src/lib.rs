@@ -3,6 +3,7 @@ pub mod my_string;
 pub mod ownership;
 pub mod option_result;
 pub mod trait_;
+pub mod generic;
 
 pub mod vector {
     use crate::utils;

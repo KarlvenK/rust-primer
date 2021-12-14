@@ -6,6 +6,7 @@ use rust_primer::ownership;
 use rust_primer::pattern_match;
 use rust_primer::option_result;
 use rust_primer::trait_;
+use rust_primer::generic;
 
 fn main() {
     println!("Hello, world!");
@@ -19,4 +20,5 @@ fn main() {
     pattern_match::practice();
     option_result::practice();
     trait_::practice();
+    generic::practice();
 }
