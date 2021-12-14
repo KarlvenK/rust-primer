@@ -7,6 +7,7 @@ use rust_primer::pattern_match;
 use rust_primer::option_result;
 use rust_primer::trait_;
 use rust_primer::generic;
+use rust_primer::func;
 
 fn main() {
     println!("Hello, world!");
@@ -21,4 +22,5 @@ fn main() {
     option_result::practice();
     trait_::practice();
     generic::practice();
+    func::practice();
 }
