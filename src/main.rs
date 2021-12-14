@@ -9,6 +9,7 @@ use rust_primer::trait_;
 use rust_primer::generic;
 use rust_primer::func;
 use rust_primer::closure;
+use rust_primer::collection;
 
 fn main() {
     println!("Hello, world!");
@@ -25,4 +26,6 @@ fn main() {
     generic::practice();
     func::practice();
     closure::practice();
+    collection::vector::practice();
+    collection::hash_map::practice();
 }
