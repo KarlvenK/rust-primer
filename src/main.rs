@@ -5,6 +5,7 @@ use rust_primer::my_string;
 use rust_primer::ownership;
 use rust_primer::pattern_match;
 use rust_primer::option_result;
+use rust_primer::trait_;
 
 fn main() {
     println!("Hello, world!");
@@ -17,4 +18,5 @@ fn main() {
     ownership::practice();
     pattern_match::practice();
     option_result::practice();
+    trait_::practice();
 }

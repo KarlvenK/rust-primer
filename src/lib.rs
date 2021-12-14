@@ -2,6 +2,7 @@ pub mod multi_type;
 pub mod my_string;
 pub mod ownership;
 pub mod option_result;
+pub mod trait_;
 
 pub mod vector {
     use crate::utils;
