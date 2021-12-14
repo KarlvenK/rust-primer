@@ -66,6 +66,7 @@ fn hyper_func() {
         b.push(get_func(*i)(*i))
     }
     println!("{:?}", b);
+    put_blank_line();
 }
 
 fn pattern() {

@@ -7,6 +7,7 @@ pub mod generic;
 pub mod vector;
 pub mod pattern_match;
 pub mod func;
+pub mod closure;
 
 pub mod utils {
     pub fn put_blank_line() {

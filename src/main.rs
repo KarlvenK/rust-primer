@@ -8,6 +8,7 @@ use rust_primer::option_result;
 use rust_primer::trait_;
 use rust_primer::generic;
 use rust_primer::func;
+use rust_primer::closure;
 
 fn main() {
     println!("Hello, world!");
@@ -23,4 +24,5 @@ fn main() {
     trait_::practice();
     generic::practice();
     func::practice();
+    closure::practice();
 }
