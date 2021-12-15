@@ -10,6 +10,7 @@ use rust_primer::generic;
 use rust_primer::func;
 use rust_primer::closure;
 use rust_primer::collection;
+use rust_primer::iterator;
 
 fn main() {
     println!("Hello, world!");
@@ -28,4 +29,5 @@ fn main() {
     closure::practice();
     collection::vector::practice();
     collection::hash_map::practice();
+    iterator::practice();
 }

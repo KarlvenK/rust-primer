@@ -9,6 +9,7 @@ pub mod pattern_match;
 pub mod func;
 pub mod closure;
 pub mod collection;
+pub mod iterator;
 
 pub mod utils {
     pub fn put_blank_line() {
