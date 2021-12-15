@@ -16,6 +16,7 @@ use rust_primer::with_example::starter;
 
 fn main() {
     println!("Hello, world!");
+    /*
     circle::practice();
     vector::practice();
     multi_type::tuples::practice();
@@ -36,6 +37,6 @@ fn main() {
     iterator::practice();
 
     smart_ptr::practice();
-
+    */
     starter::start();
 }
