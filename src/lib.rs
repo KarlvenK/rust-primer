@@ -12,6 +12,7 @@ pub mod collection;
 pub mod iterator;
 pub mod smart_ptr;
 pub mod with_example;
+pub mod mutil_thread;
 
 pub mod utils {
     pub fn put_blank_line() {

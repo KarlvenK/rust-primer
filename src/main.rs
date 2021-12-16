@@ -13,6 +13,7 @@ use rust_primer::collection;
 use rust_primer::iterator;
 use rust_primer::smart_ptr;
 use rust_primer::with_example::starter;
+use rust_primer::mutil_thread;
 
 fn main() {
     println!("Hello, world!");
@@ -39,4 +40,5 @@ fn main() {
     smart_ptr::practice();
     */
     starter::start();
+    mutil_thread::practice();
 }
