@@ -40,5 +40,5 @@ fn main() {
     smart_ptr::practice();
     */
     starter::start();
-    mutil_thread::practice();
+    //mutil_thread::practice();
 }
