@@ -2,6 +2,7 @@ use crate::utils::put_blank_line;
 use super::output;
 use super::enumerate;
 use super::type_transform;
+use super::closure;
 
 pub fn start() {
     output::practice();
@@ -9,6 +10,7 @@ pub fn start() {
     type_transform::practice();
     try_iterator();
     try_destructure();
+    closure::practice();
 }
 
 fn try_destructure() {
