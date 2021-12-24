@@ -5,6 +5,7 @@ use super::type_transform;
 use super::closure;
 use super::use_box;
 use super::use_generic;
+use super::owner;
 
 pub fn start() {
     output::practice();
@@ -15,6 +16,7 @@ pub fn start() {
     //closure::practice();
     use_box::practice();
     use_generic::practice();
+    owner::practice();
 }
 
 fn try_destructure() {
