@@ -3,6 +3,8 @@ use super::output;
 use super::enumerate;
 use super::type_transform;
 use super::closure;
+use super::use_box;
+use super::use_generic;
 
 pub fn start() {
     output::practice();
@@ -10,7 +12,9 @@ pub fn start() {
     type_transform::practice();
     try_iterator();
     try_destructure();
-    closure::practice();
+    //closure::practice();
+    use_box::practice();
+    use_generic::practice();
 }
 
 fn try_destructure() {
