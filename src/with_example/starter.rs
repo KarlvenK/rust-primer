@@ -6,6 +6,7 @@ use super::closure;
 use super::use_box;
 use super::use_generic;
 use super::owner;
+use super::special_trait;
 
 pub fn start() {
     output::practice();
@@ -17,6 +18,7 @@ pub fn start() {
     use_box::practice();
     use_generic::practice();
     owner::practice();
+    special_trait::practice();
 }
 
 fn try_destructure() {

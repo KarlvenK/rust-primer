@@ -6,3 +6,4 @@ pub mod closure;
 pub mod use_box;
 pub mod use_generic;
 pub mod owner;
+pub mod special_trait;
