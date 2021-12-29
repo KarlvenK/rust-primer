@@ -8,10 +8,98 @@ pub fn practice() {
     ite();
     impl_trait();
     impl_clone();
+    super_trait();
+    eliminate_overlapped_trait();
+}
+
+fn eliminate_overlapped_trait() {
+    trait UsernameWidget {
+        fn get(&self) -> String;
+    }
+
+    trait AgeWidget {
+        fn get(&self) -> u8;
+    }
+
+    struct Form {
+        username: String,
+        age: u8,
+    }
+
+    impl UsernameWidget for Form {
+        fn get(&self) -> String {
+            self.username.clone()
+        }
+    }
+    impl AgeWidget for Form {
+        fn get(&self) -> u8 {
+            self.age
+        }
+    }
+
+    let form = Form {
+        username: String::from("a"),
+        age: 1,
+    };
+
+    let username = <Form as UsernameWidget>::get(&form);
+    assert_eq!(String::from("a"), username);
+    let age = <Form as AgeWidget>::get(&form);
+    assert_eq!(1, age);
+}
+
+fn super_trait() {
+    trait Person {
+        fn name(&self) -> String;
+    }
+
+    trait Student: Person {
+        fn university(&self) -> String;
+    }
+    trait Programmer {
+        fn fav_language(&self) -> String;
+    }
+    trait CompSciStudent: Programmer + Student {
+        fn git_username(&self) -> String;
+    }
+
+    fn comp_sci_student_greeting(student: &dyn CompSciStudent) -> String {
+        format!(
+            "My name is {} and I attend {}. My favorate language is {}. My Git username is {}",
+            student.name(),
+            student.university(),
+            student.fav_language(),
+            student.git_username(),
+        )
+    }
 }
 
 fn impl_clone() {
+    put_blank_line();
 
+    #[derive(Debug, Clone, Copy)]
+    struct Nil;
+    #[derive(Debug, Clone)]
+    struct Pair(Box<i32>, Box<i32>);
+
+    let nil = Nil;
+    let copied_nil = nil;
+    println!("original: {:?}", nil);
+    println!("copy: {:?}", copied_nil);
+    //--------
+    let pair = Pair(Box::new(1), Box::new(2));
+    println!("original: {:?}", pair);
+
+    let moved_pair = pair;
+    println!("copy: {:?}", moved_pair);
+    //error Pair(1,2) has been moved to moved_pair
+    //println!("original: {:?}", pair);
+
+    let cloned_pair = moved_pair.clone();
+    drop(moved_pair);
+    //error it has been dropped
+    //println!("copy: {:?}", moved_pair);
+    println!("clone: {:?}", cloned_pair);
 }
 
 fn impl_trait() {
