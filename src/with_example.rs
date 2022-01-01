@@ -7,3 +7,4 @@ pub mod use_box;
 pub mod use_generic;
 pub mod owner;
 pub mod special_trait;
+pub mod err_handle;
